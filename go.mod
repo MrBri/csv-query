@@ -1,4 +1,4 @@
-module github.com/MrBri/10x
+module github.com/MrBri/csv-query
 
 go 1.21
 
