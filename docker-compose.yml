@@ -1,0 +1,22 @@
+version: '3'
+services:
+  csv:
+    image: mrbri/csv-query
+    ports:
+      - "3333:3333"
+    depends_on:
+      - surrealdb
+
+  surrealdb:
+    entrypoint:
+      - /surreal
+      - start
+      - --user
+      - root
+      - --pass
+      - root
+    image: surrealdb/surrealdb:latest
+    ports:
+      - "8000:8000"
+
+
